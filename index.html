@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F4F4F9; /* Light background for contrast */
+            color: #333;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: #291F47; /* Dominant Color */
+            color: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .form-container input,
+        .form-container select {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #7356C7; /* Secondary Color */
+            border-radius: 4px;
+            width: calc(100% - 22px);
+            background-color: #FFFFFF; /* White background for inputs */
+            color: #333;
+        }
+
+        .form-container input[type="button"],
+        .form-container input[type="submit"],
+        .form-container input[type="reset"] {
+            background-color: #7356C7; /* Secondary Color */
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-container input[type="button"]:hover,
+        .form-container input[type="submit"]:hover,
+        .form-container input[type="reset"]:hover {
+            background-color: #916CFA; /* Accent Color */
+        }
+
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #FFFFFF;
+        }
+
+        .form-container input[type="file"] {
+            padding: 0;
+        }
+
+        .form-container input[type="radio"],
+        .form-container input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+    </style>
+    <script>
+         function updateSalaryValue(value) {
+        document.getElementById('salaryValue').textContent = value.toLocaleString();
+    }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <div style="text-align: center;">
+                <h2>Styled Form</h2>
+                <p>With 60 / 30 /10 UI Rule</p>
+            </div>
+<hr>
+
+<label for="image">Upload Profile Image:</label>
+            <input type="image" style="width: 120px;height: 120px;" id="image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbOBTP3crFiZLMt5AI7jvG74hjhSkXzPFtUgmRrv4hruK5_HO7K5fBV3fEHi9TyvhFrN0O1REnTHvtn2avBev0d5fAx_3XBkSAR1czMPSXHJJq-rGPeAT4XcXIxK0H8K-ApOfKN3FqFUYfuJTKv0SSCYEjmdHRpLlLkO7epyd0moQF_ii-12I471xQezgK/s320/IMG_0254%20(2)-2.png" alt="Placeholder">
+
+<label for="text">Enter Name:</label>
+<input type="text" id="text" required>
+
+
+      
+<label for="checkbox">Checkbox for courses:</label>     
+
+<label for="checkbox">C#</label>
+<input type="checkbox" id="checkbox">
+<label for="checkbox">Java</label>
+<input type="checkbox" id="checkbox">
+<label for="checkbox">Python</label>
+<input type="checkbox" id="checkbox">
+
+<label for="Degree">Choose Degree:</label>
+<select id="Degree" name="Degree">
+  <option value="BSCS">BSCS</option>
+  <option value="BSEE">BSEE</option>
+  <option value="BSPS">BSPS</option>
+  <option value="BSPAK">BSPAK</option>
+</select>
+
+            <label for="color">Your Favourute Color:</label>
+            <input type="color" id="color" name="color" style="height: 20px;">
+
+            <label for="date">Preferred Interview Date:</label>
+            <input type="date" id="date">
+
+            <label for="datetime-local">Preferred Interview Date & Time Local:</label>
+            <input type="datetime-local" id="datetime-local">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="file">Upload Documents:</label>
+            <input type="file" id="file">
+
+            <label for="hidden">Hidden:( input for cookies)</label>
+            <input type="hidden" id="hidden">
+
+            
+
+            <label for="month">Month of Graduation:</label>
+            <input type="month" id="month">
+
+            <label for="number">You total Obtained CGPA:</label>
+            <input type="number" id="number" max="4.0" step="0.1" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <label for="password">Confirm Password:</label>
+            <input type="password" id="password" required>
+ 
+            <label for="radio">Chose your Gender:</label>
+            <input type="radio" id="radio" name="gender">
+            <label for="radio" id="radio" name="gender">Male</label>
+            <input type="radio" id="radio" name="gender">
+            <label for="radio" id="radio" name="gender">Female</label>
+
+<br>
+           <!---<label for="range">Range:</label>
+            <input type="range" id="range" >--->
+            <label for="salaryRange">Preferred Salary Range:</label>
+<input type="range" id="salaryRange" name="salaryRange" min="20000" max="100000" step="1000" value="20000" oninput="updateSalaryValue(this.value)">
+<span id="salaryValue">20,000</span> 
+<br>
+<br>
+            <label for="search">Search:</label>
+            <input type="search" id="search" placeholder="e.g Google Search Tab">
+
+            <label for="tel">Tel:</label>
+            <input type="tel" id="tel">
+                
+            <label for="text">Enter Your Summary:</label>
+            <textarea name="message" rows="10" cols="60" placeholder="I am a ....."></textarea>
+
+            <label for="time">Preferred Time for Test:</label>
+            <input type="time" id="time">
+
+            <label for="url">LinkedIn URL:</label>
+            <input type="url" id="url" placeholder="e.g www.LinkedIn.com/Yaseen">
+
+            <label for="week">Which Week you Preferred For your Test</label>
+            <input type="week" id="week">
+
+
+            <label for="submit">Submit: with type"submit"</label>
+            <input type="submit" id="submit" value="Submit">
+
+            <label for="button">Button: with type"button"</label>
+            <input type="button" id="button" value="Click Me">
+
+            
+            <label for="reset">Reset:</label>
+            <input type="reset" id="reset" value="Reset">
+
+        </form>
+    </div>
+</body>
+</html>
